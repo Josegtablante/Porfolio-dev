@@ -2,4 +2,4 @@
 
 #Se vendran mejoras futuramente
 
-![image](https://github.com/Josegtablante/Porfolio-dev/assets/67521542/b95772b3-aa5c-4b58-94dc-5337bb0ac415)
+![image](https://github.com/Josegtablante/Porfolio-dev/assets/67521542/1214f420-f05f-432f-b8b4-f3141726066c)
