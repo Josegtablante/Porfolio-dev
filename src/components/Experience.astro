@@ -1,0 +1,33 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+    {
+        date: "Enero 2024 - Actualmente",
+        title: "Web Developer",
+        description: "Desarrollo de aplicaciones web, maquetaciones web de forma independiente para distintos clientes",
+        link: '#',
+    },
+    {
+        date: "Octubre 2022 - Actualmente",
+        title: "Mulesoft Developer en Epidata",
+        description: "Desarrollo de API's con Mulesoft como herramienta principal, creando conecciones desde Salesforce, Obteniendo el titulo de Desarrolador Mulesoft 1",
+        link: 'https://epidata.net/es/partners/mulesoft/',
+    },
+    {
+        date: "Marzo 2022",
+        title: "FullStack Java Developer en MindHub",
+        description: "Desarrollo de aplicaciones propias con HTML, CSS, JavaScript y Java para el backend con Spring Framework",
+        link: 'https://origamistore.herokuapp.com/web/index.html',
+    },
+];
+---
+<!-- dark:border-gray-700" -->
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map((experience) =>  (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experience}/>
+        </li>
+        ))
+    }
+</ol>

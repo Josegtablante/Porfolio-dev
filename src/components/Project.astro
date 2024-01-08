@@ -1,0 +1,69 @@
+---
+import Css from "./icons/Css.astro";
+import Java from "./icons/Java.astro";
+import Javascript from "./icons/Javascript.astro";
+
+const TAGS = {
+    JAVA: {
+        name: "Java",
+        class: "text-white",
+        icon: Java,
+    },
+    CSS: {
+        name: "Css",
+        class: "text-white",
+        icon: Css,
+    },
+    JAVASCRIPT: {
+        name: "JavaScript",
+        class: "text-white",
+        icon: Javascript,
+    },
+};
+
+const PROJECTS = [
+    {
+        title: "Origami",
+        description:
+            "Tienda online donde puedes conseguir articulos relacionados a manga y anime",
+        link: "#",
+        Github: "https://github.com/Josegtablante/MindhubFinalProject",
+        imagen: "/Origami.webp",
+        tags: [TAGS.CSS, TAGS.JAVA, TAGS.JAVASCRIPT],
+    },
+    {
+        title: "Mulesoft",
+        description:
+            "Desarrollo de APIs para las diferentes integraciones con Salesforce",
+        link: "https://epidata.net/es/partners/mulesoft/",
+        Github: "#",
+        imagen: "Mulesoft.webp",
+        tags: [TAGS.JAVA],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ title, description, imagen, tags }) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                            <tag.name />
+                            <tag.icon class="size-4" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={imagen}
+                alt="captura de pantalla del proyecto {title}"
+            />
+        </article>
+    ))
+}

@@ -1,0 +1,85 @@
+---
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import Github from "../components/icons/Github.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Gmail from "../components/icons/Gmail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import Proyecto from "../components/icons/Proyecto.astro";
+import Project from "../components/Project.astro";
+---
+
+<Layout
+	title="Portafolio Jose Tablante - Desarrollador y Desarrollador Web"
+	description="portafolio Jose tablante FullStack Developer "
+>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-24">
+			<!-- aca va la IMG foto -->
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+			>
+				Hey, soy Joze :) <a
+					href="https://www.linkedin.com/in/josetablante/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span>+3 años de experiencia.</span>
+				<span class="text-yellow-200/90"
+					>FullStack y Mulesoft Developer</span
+				>
+				Actualmente viviendo en <span class="text-blue-200/90">
+					Argentina.</span
+				>
+				<span class="opacity-70">
+					Especializado en crear aplicaciones unicas y creacion de
+					API's REST.</span
+				>
+			</h2>
+
+			<!-- nav Contacto -->
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/josetablante" >
+					<Linkedin class="size-4 md:size-6" />
+					LinkedIn
+				</SocialPill>
+
+				<SocialPill href="https://www.github.com/Josegtablante">
+					<Github class="size-4 md:size-6" />
+					Github
+				</SocialPill>
+
+				<SocialPill href="mailto:joze.gtablante@gmail.com">
+					<Gmail class="size-4 md:size-6" />
+					joze.gtablante@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<!-- Experiencia -->
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7 md:size-6" />
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<!-- proyectos -->
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Proyecto class="size-7 md:size-6" />
+				Proyectos
+			</h2>
+			<Project />
+		</SectionContainer>
+	</main>
+</Layout>
